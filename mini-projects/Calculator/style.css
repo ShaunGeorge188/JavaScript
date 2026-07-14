@@ -1,43 +1,93 @@
-body{
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@500;600&display=swap');
+
+body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: yellow;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #1a1a1c;
+    font-family: 'Inter', sans-serif;
 }
 
-#container{
-    padding: 2px;
-    height: 500px;
+#container {
+    padding: 20px;
     width: 300px;
-    border: 6px solid black;
-    background-color: pink;
+    background-color: #2b2b2e;
+    border: none;
+    border-radius: 18px;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.5),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    border-radius: 20px;
-    box-shadow: 5px 5px 7px 0px black;
 }
 
-.click-buttons{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-button{
-    font-size: larger;
-    padding: 20px;
-    margin: 8.5px;
-}
-
-#display{
+#display {
+    width: 100%;
+    height: 70px;
+    margin-bottom: 20px;
+    background-color: #c4d1a8;
+    border: none;
+    border-radius: 8px;
+    box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.35);
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    border: 2px solid black;
-    height: 60px;
-    width: 260px;
-    font-size: 24px;
-    padding: 0 10px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f2e17;
+    overflow: hidden;
+}
+
+.click-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    width: 58px;
+    height: 50px;
+    margin: 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #f2f2f0;
+    background-color: #3f3f45;
+    box-shadow:
+        0 3px 0 rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    transition: transform 0.05s ease, box-shadow 0.05s ease;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow:
+        0 1px 0 rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.operator {
+    background-color: #d97b3f;
+    color: #2b1a0f;
+}
+
+.equals {
+    background-color: #5c8a5c;
+    color: #f2f2f0;
+    width: 58px;
+}
+
+.clear {
+    background-color: #a8453a;
+    color: #f2f2f0;
 }
